@@ -31,18 +31,19 @@
       <tbody>
           @foreach($paises as $pais => $infopais)
           <tr>
-              <td>
+              <td rowspan="3">
                   {{ $pais }}
               </td>
-              <td>
+              <td rowspan="3">
                   {{$infopais ["capital"]}}
               </td>
-              <td>
+              <td rowspan="3" >
                   {{$infopais ["moneda"]}}
-              </td>
-              <td>
+              </td >
+              <td rowspan="3">
                   {{$infopais ["poblacion"]}}
               </td>
+              @foreach ($infoPais["ciudades "] as $ciudad)
           </tr>
           @endforeach
       </tbody>
